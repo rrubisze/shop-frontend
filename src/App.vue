@@ -1,13 +1,7 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
     <TopBarComponent></TopBarComponent>
     <router-view/>
-    <ShoppingCartComponent></ShoppingCartComponent>
-
   </div>
 </template>
 
@@ -18,6 +12,8 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  height: 100%;
+  width: 100%
 }
 
 #nav {
@@ -32,16 +28,18 @@
 #nav a.router-link-exact-active {
   color: #42b983;
 }
+
+body {
+  margin: 0px;
+}
 </style>
 <script lang="ts">
 import TopBarComponent from './components/TopBar.vue';
-import ShoppingCartComponent from './components/ShoppingCart.vue';
 
 export default {
   name: 'Home',
   components: {
     TopBarComponent,
-    ShoppingCartComponent,
   },
 };
 </script>

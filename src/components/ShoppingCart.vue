@@ -1,6 +1,6 @@
 <template>
 <div class="sc-container">
-    <h2>First Component</h2>
+    <label>First Component</label>
 </div>
 </template>
 <script lang="ts">
@@ -10,12 +10,13 @@ import { Component, Prop, Vue } from 'vue-property-decorator';
 export default class ShoppingCartComponent extends Vue {
 }
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
 
 $color: #FFFFFF;
 
 .sc-container {
     background-color: #653489;
+    width: 100%;
 
     h2 {
     color: $color;

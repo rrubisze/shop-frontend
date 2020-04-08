@@ -1,13 +1,10 @@
 <template>
-  <div class="about">
-    <h1>This is an about page</h1>
-  </div>
+    <h1>Contact</h1>
 </template>
 <style lang="scss">
-
 </style>
 <script lang="ts">
 export default {
-  name: 'Admin',
+  name: 'Contact',
 };
 </script>
