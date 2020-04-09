@@ -13,6 +13,7 @@
   .shop-container {
     display: flex;
     flex-direction: row;
+    height: 100%;
   }
 
   .shop-shopping-cart {
@@ -26,6 +27,7 @@
   .shop-panel {
     width: 79%;
     height: 100%;
+    position: absolute;
     background-color: yellow;
   }
 </style>
