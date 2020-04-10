@@ -6,6 +6,7 @@
 </template>
 
 <style>
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -27,6 +28,14 @@
 
 #nav a.router-link-exact-active {
   color: #42b983;
+}
+
+html{
+  background: white;
+  background-size: contain;
+  font-size: 62.5%;
+  font-family: 'Montserrat', non-serif;
+  color: black;
 }
 
 body {

@@ -1,11 +1,30 @@
 <template>
-    <div style="width: 100px; height 20px;">
-        <h1>Tile Component</h1>
+    <div>
+         <img class= "image" src="./../assets/aubergine.png" alt="">
+         <h1>Aubergine</h1>
+         <h2>$3,99</h2>
     </div>
 </template>
-<style lang="scss">
+<style lang="scss" scoped>
 h1 {
-    color: red
+    color: #000000;
+    text-align: left;
+    font-family: Montserrat,sans-serif;
+    font-size: 2rem;
+}
+
+h2{
+    color:black;
+    text-align: left;
+    font-family: Montserrat,sans-serif;
+    font-size: 1.5rem;
+}
+div{
+    padding: 2rem;
+    margin-top: 10rem;
+}
+.image {
+    height: 20rem;
 }
 </style>
 <script lang="ts">
