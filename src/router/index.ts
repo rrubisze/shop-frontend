@@ -8,13 +8,13 @@ import UserDetail from '../views/UserDetail.vue';
 Vue.use(VueRouter);
 
 const routes: Array<RouteConfig> = [
-  // {
-  //   path: '/',
-  //   name: 'Shop',
-  //   component: Shop,
-  // },
   {
-    path: '/',
+    path: '/shop',
+    name: 'Shop',
+    component: Shop,
+  },
+  {
+    path: '/productDetails/:id',
     name: 'productDetails',
     component: ProductDetail,
   },

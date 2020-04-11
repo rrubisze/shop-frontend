@@ -2,12 +2,8 @@
     <div class="top-bar">
       <img src="./../assets/Example.svg" alt="" class="logo">
       <div class="menu">
-        <button class="menu-button-active">
-          Shop
-        </button>
-        <button class="menu-button">
-          Contact
-        </button>
+        <router-link tag="button" to="/shop" class="menu-button" active-class="menu-button-active">Shop</router-link>
+        <router-link tag="button" to="/contact" class="menu-button" active-class="menu-button-active" exact>Contact</router-link>
       </div>
       <div class="profile">
         <img src="./../assets/Ellipse 1.svg" alt="" class="avatar">
@@ -89,6 +85,19 @@ import { Component, Prop, Vue } from 'vue-property-decorator';
 
 @Component
 export default class TopBarComponent extends Vue {
+  
+  
+  goToShopPage() {
+    this.$router.push('/');
+  }
+
+  goToContactPage() {
+    this.$router.push('/contact');
+  }
+
+  isActiveConactRoute() {
+    return this.$router.currentRoute.name === "contact";
+  }
 }
 </script>
 
