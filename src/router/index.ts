@@ -9,6 +9,10 @@ Vue.use(VueRouter);
 
 const routes: Array<RouteConfig> = [
   {
+    path: '/',
+    redirect: '/shop'
+  },
+  {
     path: '/shop',
     name: 'Shop',
     component: Shop,
@@ -41,5 +45,6 @@ const routes: Array<RouteConfig> = [
 const router = new VueRouter({
   routes,
 });
+
 
 export default router;
