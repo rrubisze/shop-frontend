@@ -5,10 +5,7 @@
            <input type="text" class="searchTerm" placeholder="SEARCH">
            <div class="icon"></div>
          </div>
-      <TileComponent></TileComponent>
-      <TileComponent></TileComponent>
-      <TileComponent></TileComponent>
-      <TileComponent></TileComponent>
+      <TileComponent v-on:click.native="navigateToDetails(1)"></TileComponent>
     </div>
     <div class="shop-shopping-cart" id="shop-shopping-cart-container">
       <ShoppingCartComponent></ShoppingCartComponent>
@@ -73,6 +70,7 @@ border-radius: 5rem;
 <script>
 import ShoppingCartComponent from './../components/ShoppingCart';
 import TileComponent from "./../components/Tile" ;
+import router from '../router';
 // @ is an alias to /src
 export default {
   name: 'Shop',
@@ -80,5 +78,10 @@ export default {
     ShoppingCartComponent,
     TileComponent
   },
+   methods: {
+    navigateToDetails: function (id) {
+      router.push("/shop/product/" + id)
+    }
+   }
 };
 </script>

@@ -18,8 +18,8 @@ const routes: Array<RouteConfig> = [
     component: Shop,
   },
   {
-    path: '/productDetails/:id',
-    name: 'productDetails',
+    path: '/shop/product/:id',
+    name: 'product',
     component: ProductDetail,
   },
   {
