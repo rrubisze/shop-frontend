@@ -1,10 +1,10 @@
 <template>
-<div class="sc-container">
+<div v-bind:class="[shoppingCartView ? 'sc-container' : 'dupa']">
     <h1>Shopping cart</h1>
     <p class="instruction">Drag and drop product to start shopping</p>
     <p class="total">TOTAL:</p>
     <p class="price"> $0,00</p>
-    <button class= "checkout-save">checkout</button>
+    <button @click="checkout()" class= "checkout-save">checkout</button>
     <button class= "empty-delete-remove">empty shopping cart</button>
 </div>
 </template>
@@ -90,9 +90,22 @@ p { font-size: 1.5rem;}
 }
 </style>
 <script lang="ts">
-import { Component, Prop, Vue } from 'vue-property-decorator';
+import { Component, Prop, Vue, Emit } from 'vue-property-decorator';
 
 @Component
 export default class ShoppingCartComponent extends Vue {
+
+    shoppingCartView = true;
+
+    @Emit('checkoutEmit')
+    checkoutEmit(){
+        console.log("Emit")
+    }
+
+    checkout() {
+        this.checkoutEmit();
+        this.shoppingCartView = false;
+        console.log("Checkout");
+    }
 }
 </script>
