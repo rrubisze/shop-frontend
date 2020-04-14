@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div v-show="shoppingCartView" v-bind:class="[shoppingCartView ? 'sc-container' : 'dupa']">
+        <div id="sc_collapsed_shopping_cart" v-show="shoppingCartView" v-bind:class="[shoppingCartView ? 'sc-container' : 'dupa']">
             <h1>Shopping cart</h1>
             <p class="instruction">Drag and drop product to start shopping</p>
             <p class="total">TOTAL:</p>
@@ -8,8 +8,8 @@
             <button @click="checkout()" class= "checkout-save">checkout</button>
             <button class= "empty-delete-remove">empty shopping cart</button>
         </div>
-        <div v-show="!shoppingCartView">
-            <h1>safdasfasf cart</h1>
+        <div id="sc_expanded_shopping_cart" v-show="!shoppingCartView">
+            
         </div>
     </div>
 </template>
