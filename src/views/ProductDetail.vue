@@ -1,7 +1,7 @@
 <template>
  <div class="shop-container" id="shop-main-div">
     <div class="product-panel">
-      <img src="./../assets/back.svg" alt="" class="back">
+      <a class="back"></a>
       <img class= "detail" src="./../assets/aubergine.svg" alt="">
       <h1>Aubergine</h1>
       <h2>$3,99</h2>
@@ -36,16 +36,17 @@
     background-color: #fff;
   }
 .back{
-height: 5rem;
-position: absolute;
-padding-top: 5rem;
-padding-left: 7rem;
+background-image: url("./../assets/back.svg");
+background-repeat: no-repeat;
+height: 7rem;
 display: block;
+background-size: 7rem;
+margin-left: 5rem;
+margin-top: 3rem;
 }
 
 .detail{
   height: 25rem;
-  padding-top: 10rem;
   padding-left: 25rem;
   display: block;
 }

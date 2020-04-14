@@ -55,7 +55,7 @@
             font-size: 1.3rem;
             position: relative;
             z-index: 2;
-            font-weight: bold;
+            font-weight: 600;
         }
     }
 
@@ -74,7 +74,6 @@
         }
       p {
         font-size: 1.5rem;
-        font-weight: bold;
         margin-top: 0px;
       }
     }
