@@ -28,8 +28,8 @@ const routes: Array<RouteConfig> = [
     component: Contact,
   },
   {
-    path: '/userDetail',
-    name: 'userDetail',
+    path: '/profile',
+    name: 'profile',
     component: UserDetail,
   },
   {

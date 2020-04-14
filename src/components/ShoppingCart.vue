@@ -1,12 +1,17 @@
 <template>
-<div v-bind:class="[shoppingCartView ? 'sc-container' : 'dupa']">
-    <h1>Shopping cart</h1>
-    <p class="instruction">Drag and drop product to start shopping</p>
-    <p class="total">TOTAL:</p>
-    <p class="price"> $0,00</p>
-    <button @click="checkout()" class= "checkout-save">checkout</button>
-    <button class= "empty-delete-remove">empty shopping cart</button>
-</div>
+    <div>
+        <div v-show="shoppingCartView" v-bind:class="[shoppingCartView ? 'sc-container' : 'dupa']">
+            <h1>Shopping cart</h1>
+            <p class="instruction">Drag and drop product to start shopping</p>
+            <p class="total">TOTAL:</p>
+            <p class="price"> $0,00</p>
+            <button @click="checkout()" class= "checkout-save">checkout</button>
+            <button class= "empty-delete-remove">empty shopping cart</button>
+        </div>
+        <div v-show="!shoppingCartView">
+            <h1>safdasfasf cart</h1>
+        </div>
+    </div>
 </template>
 <style lang="scss" scoped>
 
