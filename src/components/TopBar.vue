@@ -6,8 +6,7 @@
         <router-link tag="button" to="/contact" class="menu-button" active-class="menu-button-active" exact>Contact</router-link>
       </div>
       <div class="profile">
-        <img src="./../assets/Ellipse 1.svg" alt="" class="avatar">
-        <p>Colleen Watson</p>
+        <ProfileComponent></ProfileComponent>
       </div>
     </div>
 </template>
@@ -67,24 +66,19 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-
-        .avatar {
-            width: 3.5rem;
-            padding-bottom: .6rem;
-        }
-      p {
-        font-size: 1.5rem;
-        margin-top: 0px;
-      }
     }
 }
 </style>
 <script lang="ts">
 import { Component, Prop, Vue } from 'vue-property-decorator';
+import ProfileComponent from "./Profile.vue";
 
-@Component
+@Component({
+  components: {
+    ProfileComponent
+  }
+})
 export default class TopBarComponent extends Vue {
-  
   
   goToShopPage() {
     this.$router.push('/');
