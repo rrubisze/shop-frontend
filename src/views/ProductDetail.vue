@@ -1,7 +1,7 @@
 <template>
  <div class="shop-container" id="shop-main-div">
     <div class="product-panel">
-      <a class="back"></a>
+      <router-link tag="a" to="/shop" class="back"></router-link>
       <img class= "detail" src="./../assets/aubergine.svg" alt="">
       <h1>Aubergine</h1>
       <h2>$3,99</h2>
@@ -9,14 +9,31 @@
         tempor irure eiusmod id eiusmod id ea pariatur culpa</p>
       <button class="add">add to shopping cart</button>
     </div>
-    <div class="shop-shopping-cart" id="shop-shopping-cart-container">
-      <ShoppingCartComponent></ShoppingCartComponent>
+    <div v-bind:class="[collapsedShoppingCart ? 'shop-shopping-cart' : 'shop-shopping-cart-expanded']" id="shop-shopping-cart-container">
+      <ShoppingCartComponent @checkoutEmit="checkout"></ShoppingCartComponent>
     </div>
   </div>
 </template>
 <style lang="scss" scoped>
   .shop-container {
     height: 100%;
+  }
+
+  .shop-shopping-cart-expanded {
+    -webkit-transition: width 1s ease-in-out;
+    -moz-transition: width 1s ease-in-out;
+    -o-transition: width 1s ease-in-out;
+    transition: width 1s ease-in-out;
+    width:70%;
+
+    height: 120rem;
+    background-color: #FAF3EF;
+    position: fixed;
+    right: 0px;
+    border-radius: 4rem;
+    margin-top: 2rem;
+
+    z-index: 11;
   }
 
   .shop-shopping-cart {
@@ -105,8 +122,26 @@ import ShoppingCartComponent from './../components/ShoppingCart';
 
 export default {
   name: 'ProductDetail',
-    components: {
-    ShoppingCartComponent
+     data: function() {
+    return {
+      collapsedShoppingCart: true,
+    };
+  },
+  components: {
+    ShoppingCartComponent,
+  },
+   methods: {
+    navigateToDetails: function (id) {
+      router.push("/shop/product/" + id)
+    },
+    checkout: function($event) {
+      //this.collapsedShoppingCart = false;
+      console.log($event);
+      
+      this.collapsedShoppingCart = false;
+      console.log(this.collapsedShoppingCart);
+      //collapsedShoppingCart = false;
     }
+   }
 };
 </script>
